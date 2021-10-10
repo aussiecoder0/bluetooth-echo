@@ -1,0 +1,25 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="fnpBt3rFo;?C4%Hhk,Cd">uartdata</variable></variables><block type="pxt-on-start" id="eYgJ;FWuoCnc2*HThDPd" x="0" y="0"><statement name="HANDLER"><block type="device_show_leds" id="WnLp;G8(:L)ig.`1-j:A"><field name="LEDS">`
+        # . . . # 
+        . # . # . 
+        . . # . . 
+        . # . # . 
+        # . . . #
+        `</field><next><block type="bluetooth_start_accelerometer_service" id="Ws!7kzg~/v;m^-/*pXz%"><next><block type="bluetooth_start_button_service" id="0PTyD{*EEYny9H,Q6mm*"><next><block type="bluetooth_start_led_service" id="XB.g+$GQcR5xzWrhiys["><next><block type="bluetooth_start_temperature_service" id="zhjuA0sr+zWq+sv)^`J:"><next><block type="bluetooth_start_magnetometer_service" id=".s8[Nt@~Mi7NzoG`/_pA"><next><block type="device_show_leds" id="ctVu)(F^^i3L3~x.Y,lY"><field name="LEDS">`
+        . . # . . 
+        . . # . . 
+        # # # # # 
+        . . # . . 
+        . . # . .
+        `</field></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="bluetooth_on_connected" id="ueyR#C9hY)Q^G!n-F(6I" x="432" y="-16"><statement name="HANDLER"><block type="device_show_leds" id="h6**E]wH=Cq0i^x=Qe/("><field name="LEDS">`
+        . . # # # 
+        . # . . . 
+        # . . . . 
+        . # . . . 
+        . . # # #
+        `</field></block></statement></block><block type="bluetooth_on_disconnected" id="No$Bl=A[2}~c8Ei}$L?8" x="666" y="-15"><statement name="HANDLER"><block type="device_show_leds" id="fuF9-}Oh91`5~yF0^D8+"><field name="LEDS">`
+        # # # . . 
+        # . . # . 
+        # . . . # 
+        # . . # . 
+        # # # . .
+        `</field></block></statement></block><block type="bluetooth_on_data_received" id="9?bYzasAJ8Ye3JSp)rY2" x="430" y="357"><value name="delimiters"><shadow type="serial_delimiter_conv" id="ly:/(f4YPIocS[yk.dW6"><field name="del">Delimiters.NewLine</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="38W!^ngm2tnH.8?{W4Oj"><field name="VAR" id="fnpBt3rFo;?C4%Hhk,Cd">uartdata</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="text_join" id="*5a0;$-A7OrcLs[CfUMw"><mutation items="1"/><value name="ADD0"><shadow type="text"><field name="TEXT"/></shadow><block type="typescript_expression" id="+9Kq(Ry!-4];Y%{@k8zI" editable="false"><field name="EXPRESSION">bluetooth.uartReadBuffer()</field></block></value></block></value><next><block type="device_print_message" id="!A0gP=vnBCAO?x|T*,!b"><value name="text"><block type="variables_get" id="TZT:8aU16@k~R*+a|ub."><field name="VAR" id="fnpBt3rFo;?C4%Hhk,Cd">uartdata</field></block></value><next><block type="controls_if" id="L:_KNZPw#.|p8LqyZ=F}"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="string_includes" id="a;-5?JgzuVcBi+Y#`+sU"><value name="this"><shadow type="text"><field name="TEXT"/></shadow><block type="variables_get" id="_vh42h0d++q)5+J!2VBX"><field name="VAR" id="fnpBt3rFo;?C4%Hhk,Cd">uartdata</field></block></value><value name="searchValue"><shadow type="text" id="$T5//s`GmqyWfE[4LK-x"><field name="TEXT">NORTH</field></shadow></value></block></value><statement name="DO0"><block type="basic_show_arrow" id="K3]SX(:6L+.BPNN;umVU"><value name="i"><shadow type="device_arrow" id="iO=bWf]zFoMSEzmhQLLf"><field name="arrow">ArrowNames.North</field></shadow></value></block></statement></block></next></block></next></block></statement></block></xml>
